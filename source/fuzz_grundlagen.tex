@@ -1,0 +1,60 @@
+\chapter{Grundlagen des Fuzzings}
+\label{sec:Grundlagen}
+
+In der vorliegenden Arbeit stützen wir uns auf die nachfolgende Definition des Fuzzings unter Bezugnahme auf die zitierten Quellen.
+
+\begin{definition}[nach Chen et al., 2018]
+\label{def:fuzzing}
+Fuzzing ist eine effektive und weit verbreitete Methode zur Identifikation von Sicherheitslücken und Schwachstellen in Software. Dabei werden dem Zielprogramm gezielt unregelmäßige oder zufällige Testdaten zugeführt, um eine Ausführungssituation zu erzeugen, die potenziell eine verwundbare Programmstelle offenlegt \parencite{chen2018systematic}.
+\end{definition}
+
+Ein Bug oder Fehler wird in diesem Zusammenhang wie folgt definiert:
+
+\begin{definition}[nach Chen et al., 2018]
+\label{def:bug}
+Ein Software-Bug ist ein Fehler, Mangel oder Defekt in einem Computerprogramm oder -system, der dazu führt, dass das Programm ein inkorrektes oder unerwartetes Ergebnis liefert oder sich auf eine Weise verhält, die nicht intendiert ist (Wikipedia, 2017a).
+\end{definition}
+
+Bugs stellen demnach grundsätzlich Fehler dar, die ein vom Programmierer nicht intendiertes Verhalten hervorrufen. Dabei ist zu beachten, dass ein Algorithmus trotz scheinbar normaler Funktionalität durch gezielt gewählte Eingaben unerwartetes Verhalten erzeugen kann. Die Identifikation und Vermeidung solcher Fehler ist die zentrale Aufgabe des Fuzzings.
+
+\section{Blackbox, Whitebox und Greybox}
+
+Beim Blackbox-Fuzzing wird die interne Logik, oder Architektur der Software nicht berücksichtigt. Es wird ledigtlich das Ergebnis der Eingabe betrachtet. Whitebox hingegen berücksichtigt die interne Logik des Programms. Ziel kann hier beispielsweise eine maximale Pfadabdeckung beim Fuzzing sein. Es geht nicht nur um das Ergebnis, sondern um eine detaillierte Einsicht in die interne Logik des Verhaltens. Greybox liegt zwischen diesen beiden Extremen. Es werden einige Informationen über das Softwaresystem herangezogen, aber nicht im Detail. 
+
+Whitebox kann somit als ein Teil des Softwareentwicklungs, bzw. Testprozesses verstanden werden. Während Black und Greybox vor allem für Pentester relevant ist, die nicht in den Entwicklungsprozess mit eingebunden sind. 
+
+\section{Klassifikation nach Eingabegenerierung}
+
+Die Eingabestrategien beim Fuzzing lassen sich grundsätzlich in mutation-basierte und generation-basierte Ansätze unterteilen. Bei einer mutation-basierten Eingabestrategie werden bestehende Input-Seeds zufallsbasiert transformiert. Dies kann frühzeitig zur Erzeugung invalider Eingaben führen, die vom Zielprogramm verworfen werden. Gleichzeitig kann diese Vorgehensweise jedoch zu einer reduzierten Pfadabdeckung (Code-Coverage) führen. 
+
+Im Gegensatz dazu generiert eine generation-basierte Eingabestrategie neue Testdaten auf der Grundlage einer formalen Spezifikation oder eines Modells. Beispielsweise können bestimmte Grammatiken oder formale Regeln zur Erzeugung valider Eingaben herangezogen werden. Dieser Ansatz führt typischerweise zu einer geringeren Anzahl an Testfällen im Vergleich zur mutation-basierten Strategie, kann jedoch eine höhere zeitliche Komplexität aufweisen.
+
+\section{Mit und ohne Feedbackmechanismus}
+
+Die Eingabestrategie kann die Ausgabe des Programms heranziehen, um neue Eingabedaten in der nächsten Schleife zu erstellen. Diese Techniken zielen in erster Linie auf eine höhere Pfadabdeckung und sind somit vor allem für das Whitebox Fuzzing relevant. Beim Feedback kann es sich um die Ausgabe des Programmes, oder um andere Laufzeitinformationen, beispielsweise Informationen von einem Debugger, handeln. 
+
+\section{Anatomie der ersten Fuzzing Systeme}
+
+\begin{definition}\label{def:dynamic-taint-analysis}
+\textbf{Dynamic Taint Analysis} ist eine Technik, bei der Laufzeitdaten markiert („getaintet“) werden, 
+um ihren Einfluss auf spätere Berechnungen zu verfolgen.
+\end{definition}
+
+\begin{definition}\label{def:coverage}
+\textbf{Coverage} ist die Abdeckung in der Software gemeint, welche die EIngabeparameter des Fuzzings erreichen. Es wird in Pfad, Branch, Zielen, oder Funktionsabdeckung unterschieden.
+\end{definition}
+
+\begin{definition}\label{def:dynamic-symbolic-exec}
+\textbf{Dynamic-Symbolic-Execution} ist eine Methode um möglichen input für ein Programm zu berechnen. 
+\end{definition}
+
+Die ersten Fuzzing-Systeme waren streng iterativ aufgebaut. In jeder Iteration werden Testfälle unter Verwendung einer vordefinierten Strategie generiert. Der \textbf{Testcase Generator} generiert Testfälle unter Verwendung von Informationen die statisch und zur Laufzeit anfallen. Ein Monitor liefert Laufzeitinformationen, beispielsweise Informationen über ~\ref{def:coverage}\textbf{Coverage}, ~\ref{def:dynamic-symbolic-exec}\textbf{Dynamic-Symbolic Execution} und Ergebnisse der ~\ref{def:dynamic-taint-analysis}\textbf{dynamic taint analysis}. ~\ref{def:bug}Bugs im Zielprogramm werden mit Hilfe eines \textbf{Bug Filter} gefiltert, um aus ihnen Schwachstellen abzuleiten.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{img/fuzzing-process.jpg}
+        \caption[Darstellung des Fuzzing-Prozesses]{Darstellung des Fuzzing-Prozesses\\
+    \textit{Quelle:\cite{chen2018systematic}}}
+    \label{fig:enter-label}
+\end{figure}
+

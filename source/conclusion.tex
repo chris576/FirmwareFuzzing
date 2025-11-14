@@ -1,0 +1,20 @@
+\chapter{Zusammenfassung und Ausblick}
+\label{sec:Schluss}
+
+In diesem Kapitel wird ein Resümee zu den Ergebnissen der Projekt- oder Abschlussarbeit gegeben. Dieses besteht im Wesentlichen aus einer kurzen Zusammenfassung der Aufgabenstellung und der in den Kapiteln~\ref{sec:Umsetzung} und~\ref{sec:Bewertung} gewonnen Erkenntnisse.
+Hierbei ist eine selbstkritische Darstellung angebracht und folgende Fragen sollten in einer Kurzfassung beantwortet werden:
+
+\begin{itemize} 
+	\item Mit welchem Ansatz (Kapitel~\ref{sec:Umsetzung}) wurde die Aufgabenstellung gelöst?
+	\item Wie gut (Kapitel~\ref{sec:Bewertung}) funktioniert die Umsetzung? 
+	%\item Was funktioniert nicht?	
+	\item Konnte die Aufgabenstellung (Kapitel~\ref{sec:Einleitung}) vollständig umgesetzt werden? 
+\end{itemize}
+
+Sowohl Optimierungsvorschläge als auch die Abgrenzung zu Themen, die explizit nicht behandelt wurden, dienen als Vorlage für den Ausblick auf Folgearbeiten.
+
+\begin{exmp}[Webcam]{ex:Schluss}
+Das realisierte Kamerasystem ist in der Lage bis zu 60 Farbbilder in der Sekunde in VGA-Auflösung aufzunehmen. Die nachgelagerte Bildverarbeitungseinheit zur Schaferkennung benötigt derzeit etwa 24\,$ms$ pro Bild, ist also in der Lage max. 42 Eingangsbilder pro Sekunde zu prozessieren, siehe Abschnitt~\ref{sec:Performanz}. Dies geht signifikant über die in der Aufgabenstellung in Abschnitt~\ref{sec:Aufgabe} geforderten 30 Bilder pro Sekunde hinaus. Aufgrund der limitierten Bandbreite der Ethernet-Schnittstelle mit 10BASE-T, ermöglicht das Kamerasystem jedoch ohne Bildkompression lediglich 22 Live-Bilder pro Sekunde an einen PC übertragen.
+
+Sowohl die Realisierung einer Bildkompression als auch eine deutliche Reduzierung des Energieverbrauchs ist daher Gegenstand weiterführender Arbeiten.
+\end{exmp}

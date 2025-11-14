@@ -1,0 +1,38 @@
+
+%% ----------------------------------------------------
+% enable and define uniform style for code listings
+%% ----------------------------------------------------
+\usepackage{listings}
+\usepackage{caption}
+
+% define colors for syntax highlighting
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.6}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.3}
+
+\lstset{
+	language=C++,	% override by '\begin{lstlisting}[language=...' 
+	frame=single, 	% top,frame=bottom,
+	numbers=left,
+	numberstyle=\tiny\color{gray!90!black},
+	basicstyle=\ttfamily\footnotesize,
+	tabsize=4,
+	showstringspaces=false,
+	captionpos=t,
+	rulecolor=\color{lightgray!40},
+	keywordstyle=\color{dkblue},
+	stringstyle=\color{red},
+	commentstyle=\color{dkgreen}
+}
+
+\DeclareCaptionFormat{listing}{	\par\vskip1pt#1#2#3}
+\captionsetup[lstlisting]
+{
+	format=listing,
+	singlelinecheck=false, 
+	margin=1em, 	
+	labelsep=colon,
+	justification=centering
+	%font={sf},
+	%labelfont=bf
+}

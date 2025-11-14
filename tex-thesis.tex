@@ -1,0 +1,79 @@
+% *******************************************************************
+% tex-thesis.tex
+% Latex Beispiel-Dokument zur Erstellung einer Abschluss- oder Projektarbeit
+% 	Hochschule Emden/Leer | Fachbereich Technik | Abteilung Elektrotechnik und Informatik
+%
+%	02.09.2016	c.koch 	initial version, lightweight version of PhD thesis 2002 
+%	21.05.2019	c.koch 	support for (fancy) listings added
+%	21.08.2019	c.koch	move tex files to dedicated folder, glossary removed, table of contents fixed
+%	29.08.2019	c.koch	merge hsel-thesis.sty and headerstyle 
+%	25.11.2019	c.koch	add background image (HSEL wave) to intro pages
+%	02.02.2021	c.koch	new custom command for highlighting examples
+% *******************************************************************
+
+\documentclass[twoside,a4paper,11pt]{book}
+
+% necessary LaTeX extensions
+\usepackage[ngerman]{babel} 	% german language support
+\usepackage[T1]{fontenc}    	% german language support
+\usepackage[utf8]{inputenc}		% character coding of input files
+\usepackage{lmodern}			% smooth characters in pdf output
+%
+% usefull LaTeX extensions - disable, if not in use
+\usepackage[dvips]{graphicx}    % enable picture import
+\usepackage{calc}               % improvement of std. calculation features \emph{i.e.} length
+\usepackage{makeidx}            % enable indexing
+\usepackage{xcolor}           	% for creating colored boxes, i.e. for psfrag replacements
+\usepackage[hang,small,scriptsize,bf]{caption} % resize the figure label
+\usepackage{amssymb}            % for special math symbols
+\usepackage{subcaption}			% used for subfigures (matrix of bundled figures)
+\usepackage{hyperref}			% support for hyperlinks 
+\usepackage{lmodern}
+\usepackage{hsel-thesis2020}    % define style of 
+
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+
+
+\usepackage{amsmath, amsthm}
+\usepackage{csquotes}
+\usepackage[backend=biber, style=apa]{biblatex}
+\usepackage{float}
+\addbibresource{myliterature.bib}  % <-- hier den richtigen Dateinamen
+
+\begin{document}
+
+\AddToShipoutPicture{\BackgroundWave}	% ENABLE background image
+
+\pagenumbering{Roman}       % set page numbers to roman style
+
+\include{source/title} 		% title page with subject and print date
+\linespread{1.2}            % reduce line spacing in each paragraph
+\noitemsep					% ... and in list environments
+
+\include{source/declaration}
+\include{source/abstract}
+\include{source/lists}
+
+\cleardoublepage            % for correct page numbering / margin
+\pagenumbering{arabic}      % reset page numbers to arabic style
+\ClearShipoutPicture		% DISABLE background image
+
+% example content and thesis structure
+\include{source/introduction}	
+\include{source/fuzz_grundlagen}
+\include{source/networking_grundlagen}
+\include{source/fuzz_algorithmen}
+\include{source/aktuelle_beispiele}
+\include{source/conclusion}
+
+\printbibliography[heading=bibintoc, title={Literatur}]
+
+\appendix
+\include{source/einennoch}
+
+\end{document}

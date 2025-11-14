@@ -1,0 +1,62 @@
+\chapter{Netzworkfuzzing}
+
+\section{Herausforderungen und Besonderheiten}
+
+Die Autoren des Papers \cite{Jiang2024SurveyNetworkProtocolFuzzing}\textbf{Systematic Fuzzing and Testing of TLS Libraries
+} identifizieren vier zentrale Charakteristika von Netzwerkprotokollen, die Fuzzing vor besondere Hürden stellen: 
+
+\begin{itemize}
+    \item \ref{sec:dep-network} Abhängigkeit von Netzwerk-Verbindungen.
+    \item \ref{sec:dep-statefull} Zustandsbehaftetheit.
+    \item \ref{sec:structured-input} Hoch strukturierte Eingaben.
+    \item \ref{sec:non-uniformität} Nicht-Uniformität.
+\end{itemize}
+
+\subsection{Abhängigkeit von Netzwerk-Verbindungen}
+\label{sec:dep-network}
+
+Anders als beim Datei-Input Fuzzing, müssen hier Netzwerkpackete gefuzzt werden, die je nach Protokoll, in einer bestimmten zeitlichen, sequentiellen Abfolge bearbeitet werden müssen. Der Fuzzer muss also ein vollwertiges PAcket für das jeweilige Netzwerkprotokoll über eine Schnittstelle übertragen. Damit muss er nicht nur das Protokoll, sondern auch die Schnittstelle verstehen. Wenn beispielsweise ein HTTPs Server, oder ein VPN-Gateway gefuzzt werden soll, kann dies zu einer erhöhten Auslastung der Infrastruktur der Firma, oder ggf. zum Ausfall führen. Für den Whitebox Hacker ist diese Art des Fuzzings somit mit ggf. höheren Kosten als beim klassischem Desktop-CLI Fuzzing verbunden. Der Blackhat-Hacker wird unter umständen schneller erkannt und muss seinen Ursprung gut tarnen. 
+
+Es lassen sich ggf. zeitliche und wirtschaftliche Kosten einsparen, wenn ein Testsystem eingerichtet wird, welches das Produktivsystem hinreichend emuliert. Beispielsweise kann auch einem Testrechner mittels OpenSSL ein TLS-Server mit derselben Version und Funktionalität eingerichtet werden.
+
+\subsection{Zustandsbehaftetheit}
+\label{sec:dep-statefull}
+
+Netzwerkrptokolle sind üblicherweise Zustandsbehaftet. Dies kann dazu führen, dass derselbe Input, zu einem anderen Verhalten führt. Denn Zustandsbehaftet heißt, dass das Verhalten des Servers von seinem internen Zustand abhängig ist. Dies beeinflusst direkt das Design des Fuzzers. Der Input muss demzufolge so generiert werden, dass er Kette von Eingaben zum Protokoll darstellt. 
+
+Die Grafik zeigt einen von den Autor*innen vorgeschlagenen Aufbau eines Fuzzers für zustandsbehaftete Protokolle. 
+\(\mathbf{S_0}\), \(\mathbf{S_1}\) und \(\mathbf{S_2}\) repräsentieren Zustände des Protokolls. 
+Sie werden aus den Eingaben \(\mathbf{C_{01}}\), \(\mathbf{C_{12}}\) und \(\mathbf{P}\) sequentiell generiert. 
+Der Zustand \(\mathbf{S_2}\) ist der Endzustand des Protokolls. 
+Ist dieser ein Fehlzustand, so wird dieser in eine Liste von Bugs übernommen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{img/stateful-fuzzer.png}
+        \caption[Zustandsbehaftetes Fuzzing]{\textit{Quelle:\cite{Jiang2024SurveyNetworkProtocolFuzzing}}}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{Hoch strukturierte Eingaben}
+\label{sec:structured-input}
+
+Netzwerkprotokolle sind hoch strukturiert. NAchrichten können in Big, oder Byte Felder mit strikter Grammatik partitioniert werden. Jedes dieser Partitionen hat eine klar definierte Range und Bedeutung. Diese Strukturen dürfen vom Fuzzer nicht verletzt werden. Randomisierte bitweise Eingabengenerierung, wie von AFL, kann daher zu einer vielzahl von Fehleingaben führen. 
+
+\subsection{Nicht-Uniformität}
+\label{sec:non-uniformität}
+
+Es gibt eine vielzahl von Netzwerkprotokollen, welche sich meist in den zugrundeliegenden Zustandsübergängen und Grammatiken der Nachrichten unterscheiden. Daher ist eine Vielzahl an Netzwerkfuzzern auf ein Protokoll spezialisiert. 
+
+\section{Vorgehensmodelle}
+
+\subsection{Vierstufiges Vorgehensmodell}
+\label{sec:forscher-vorgehensmodell}
+
+\subsection{Zweistufiger Fuzzingansatz von TLS-Attacker}
+\label{sec:tls-attacker}
+
+\subsection{TLS-Fuzzer Libary}
+\label{sec:tls-fuzzer}
+
+\subsection{Protocol State Fuzzing}
+
