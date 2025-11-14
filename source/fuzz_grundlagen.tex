@@ -25,9 +25,16 @@ Whitebox kann somit als ein Teil des Softwareentwicklungs, bzw. Testprozesses ve
 
 \section{Klassifikation nach Eingabegenerierung}
 
-Die Eingabestrategien beim Fuzzing lassen sich grundsätzlich in mutation-basierte und generation-basierte Ansätze unterteilen. Bei einer mutation-basierten Eingabestrategie werden bestehende Input-Seeds zufallsbasiert transformiert. Dies kann frühzeitig zur Erzeugung invalider Eingaben führen, die vom Zielprogramm verworfen werden. Gleichzeitig kann diese Vorgehensweise jedoch zu einer reduzierten Pfadabdeckung (Code-Coverage) führen. 
+Die Eingabestrategien beim Fuzzing lassen sich grundsätzlich in mutation-basierte und generation-basiertes, sowie Fuzzer-In-The-Middle Ansätze unterteilen. 
 
-Im Gegensatz dazu generiert eine generation-basierte Eingabestrategie neue Testdaten auf der Grundlage einer formalen Spezifikation oder eines Modells. Beispielsweise können bestimmte Grammatiken oder formale Regeln zur Erzeugung valider Eingaben herangezogen werden. Dieser Ansatz führt typischerweise zu einer geringeren Anzahl an Testfällen im Vergleich zur mutation-basierten Strategie, kann jedoch eine höhere zeitliche Komplexität aufweisen.
+\label{sec:mutation-based}
+Bei einer mutation-basierten Eingabestrategie werden bestehende Input-Seeds zufallsbasiert transformiert. Dies kann frühzeitig zur Erzeugung invalider Eingaben führen, die vom Zielprogramm verworfen werden. Gleichzeitig führt dies zu einer hohen Code-Coverage.\cite{chen2018systematic}
+
+\label{sec:generation-based}
+Im Gegensatz dazu generiert eine generation-basierte Eingabestrategie neue Testdaten auf der Grundlage einer formalen Spezifikation oder eines Modells. Beispielsweise können bestimmte Grammatiken oder formale Regeln zur Erzeugung valider Eingaben herangezogen werden. Dieser Ansatz führt typischerweise zu einer geringeren Anzahl an Testfällen im Vergleich zur mutation-basierten Strategie, kann jedoch eine höhere zeitliche Komplexität aufweisen.\cite{chen2018systematic}
+
+\label{sec:fuzzer-in-the-middle}
+Im Paper \cite{Jiang2024SurveyNetworkProtocolFuzzing} wird Fuzzing‑in‑the‑Middle (FitM) als ein Fuzzing‑Ansatz, bei dem sich der Fuzzer zwischen zwei legitimen Kommunikationspartner setzt – typischerweise zwischen Client und Server – und laufende Netzwerkkommunikation in Echtzeit beobachtet, manipuliert und fuzzed.
 
 \section{Mit und ohne Feedbackmechanismus}
 

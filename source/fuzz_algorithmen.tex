@@ -47,16 +47,27 @@ Netzwerkprotokolle sind hoch strukturiert. NAchrichten können in Big, oder Byte
 
 Es gibt eine vielzahl von Netzwerkprotokollen, welche sich meist in den zugrundeliegenden Zustandsübergängen und Grammatiken der Nachrichten unterscheiden. Daher ist eine Vielzahl an Netzwerkfuzzern auf ein Protokoll spezialisiert. 
 
-\section{Vorgehensmodelle}
+\section{Allgemeines Vorgehensmodell}
+\label{sec:allgemeines-vorgehensmodell}
 
-\subsection{Vierstufiges Vorgehensmodell}
-\label{sec:forscher-vorgehensmodell}
+Die Forscher des Artikels \cite{Jiang2024SurveyNetworkProtocolFuzzing}\textbf{A Survey of Network Protocol Fuzzing: Model, Techniques and Directions} schlagen ein vierstufiges Vorgehensmodell zur Lösung der genannten Herausforderungen vor: 
+\begin{itemize}
+  \item Protokollsyntax-Erfassung und Modelling
+  \item Testfall-Erzeugung
+  \item Testausführung und Monitoring
+  \item Feedback-Informationserfassung und Nutzung
+\end{itemize}
 
-\subsection{Zweistufiger Fuzzingansatz von TLS-Attacker}
-\label{sec:tls-attacker}
+\subsection{Erste Stufe: Protokollsyntax-Erfassung}
 
-\subsection{TLS-Fuzzer Libary}
-\label{sec:tls-fuzzer}
+In der ersten Stufe wird die Syntax der Nachrichten und der Zustandsübergänge (State-Machine) des Protokolls modelliert. 
 
-\subsection{Protocol State Fuzzing}
+Die Syntax der Nachrichten definiert hierbei eine über das Protokoll übertragene, valide Nachricht (Daten und Metadaten), ohne Kontext oder Zustand mit einzubeziehen. Es werden die Einteilung der Felder einer Nachricht, sowie deren Organisation und Abhängigkeiten betrachtet. Eine Nachricht kann Felder mit bestimmter Bedeutung und festgelegtem Datentyp haben, die in einer festgelgten Art miteinander in Beziehung stehen. 
+
+Die State-Machine ist definiert die Zuständsübergange eines Netzwerkprotokolls. Die Zustandsübergange werden repräsentiert durch einen Automaten (Ref:Theoretische Informatik).
+
+Dies bildet die Basis für alle weiteren Stufen im Vorgehensmodell. Wichtig ist, dass diese Stuffe zum Hauptfuzzing-Prozess parralelisiert werden kann, da die Ergebnisse dieses Prozesses dynamisch in den Hauptprozess übertragen werden können. 
+
+\subsection{Zweite Stufe: Testfall-Erzeugung}
+
 
