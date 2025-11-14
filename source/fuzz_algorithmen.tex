@@ -70,4 +70,23 @@ Dies bildet die Basis für alle weiteren Stufen im Vorgehensmodell. Wichtig ist,
 
 \subsection{Zweite Stufe: Testfall-Erzeugung}
 
+Diese Stufe fokussiert sich auf die Erzeugung von Testfällen. Basierend auf dem gewählten Modell und der gewählten Input-Generation-Strategie, werden in dieser Stufe die Testfälle generiert.
+
+Die zu unterscheidenden Strategien wurden bereits in der Section \ref{sec:Grundlagen} eingeleitet.
+
+\subsubsection{Anforderungen an die Input-Generation-Strategie}
+
+\paragraph{Generationbasierte Strategien} definieren im Fall des Protokoll-Fuzzings zwei Arten von Modellen: Zustandsübergänge und Protokoll-Syntax. Frühere Fuzzer, sowie Spike \cite{Jiang2024SurveyNetworkProtocolFuzzing} stellten ein Interface in Form einer Konfigurationsdatei zur Verfügung, um diese Modelle zu spezifizieren. Diese Dateien enthalten eine Art Datenstruktur der Protokoll-Syntax und der Übergänge und bilden damit die erste Epoche der hier vorgestellten Strategie.
+
+Dies setzt natürlich ein umfangreiches Wissen über das zu testende Protokoll voraus. Kleine Fehler des Modells führen zu einer gravierend kleineren Qualität des Testprozesses. Darüber hinaus fehlt diesen Modellen die Fähigkeit den Zustandsraum autonom, oder heuristisch zu erforschen, um eine optimale Testabdeckung zu erzielen. Stattdessen führen sie einen festen Zustandsautomaten aus, der auf kleine Veränderungen der Implementierung des Protokolls schlecht reagiert.\cite{Jiang2024SurveyNetworkProtocolFuzzing}
+
+Eine Strategie aktueller Fuzzer, wie Peach oder PAVFuzz, gibt bestimmten Feldern eines Paketes eine unterschiedlich hohe, oder niedrige, Gewichtung in der Wichtigkeit. Sie kalkulieren dynamische mutationen auf diesen Gewichtungen für die Daten des Elements und speichern sie in relationalen Tabellen. Dadurch werden sogenannte \textbf{state sensitive Mutations} auf diesen Daten durchgeführt, um damit mit höherer Warscheinlichkeit Verwundbarkeiten zu entdecken. 
+
+\paragraph{Mutation-Basierte Strategien} benötigen keine Spezifikation einer Syntax. 
+
+\subsubsection{Anforderungen an den Testfall}
+
+Die Erzeugung von Testfällen ist in Netzwerprotokollen vor zwei besonderen Herausforderungen gestellt: Zum einen muss ein Testfall der Protokollsyntax entsprechen. Zum anderen muss der generierte Testfall möglichst gut die komplexen Zustandsübergänge des Protokolls und seiner Implementierung abdecken. 
+
+
 
