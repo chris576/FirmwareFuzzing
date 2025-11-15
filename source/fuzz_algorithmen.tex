@@ -82,11 +82,28 @@ Dies setzt natürlich ein umfangreiches Wissen über das zu testende Protokoll v
 
 Eine Strategie aktueller Fuzzer, wie Peach oder PAVFuzz, gibt bestimmten Feldern eines Paketes eine unterschiedlich hohe, oder niedrige, Gewichtung in der Wichtigkeit. Sie kalkulieren dynamische mutationen auf diesen Gewichtungen für die Daten des Elements und speichern sie in relationalen Tabellen. Dadurch werden sogenannte \textbf{state sensitive Mutations} auf diesen Daten durchgeführt, um damit mit höherer Warscheinlichkeit Verwundbarkeiten zu entdecken. 
 
-\paragraph{Mutation-Basierte Strategien} benötigen keine Spezifikation einer Syntax. 
+\paragraph{Mutation-Basierte Strategien} benötigen keine Spezifikation einer Syntax. Sie operieren auf Bit-Ebende mit Bitflip, Arithmetic, Havoc oder Splice Operationen, auf vordefinierten Seeds, um Testfälle zu generieren. 
+
+Die Autoren des Artikels \cite{Jiang2024SurveyNetworkProtocolFuzzing} kritisieren, dass eine Manipulation auf Bit-Ebene ohne Syntax-Unterstützung häufig Testfälle generieren, die nicht der geforderten Grammatik des Protokolls entsprechen. Somit sind Coverage-Based Greybox Fuzzer, wie AFL und deren smarten derivate, wie AFLsmart, nicht auf Netzwerkprotokolle anzuwenden. Die Unterschiede zwischen klassischer Software und Protokollen sind zu groß. Diese Studie \cite{li2021protocol-fuzzing} hat untersucht, dass bis zu 90\% der generierten Testfälle invalide waren, wenn AFL auf Netzwerkprotokolle angewendet wurde. 
+
+AFLnet wendet daher einen spezifischen Mechanismus an, um Testfälle für Netzwerkprotokolle zu generieren: Es kombiniert sequentiell alle Nachrichten vom Client während einer Interaktion in ein einziges seed. ASCII wird für die Trennung der Nachrichten im Seed verwendet. GLeichzeitig pflegt und updated es eine endliche state machine durch Extraktion der Response Codes.\cite{Jiang2024SurveyNetworkProtocolFuzzing} 
+
+Dadurch wird es möglich, kontinuierlich neue Zustände in die State-Machine aufzunehmen, die im Fuzzing Prozess entdeckt werden. 
+
+Dennoch hat ein mutationsbasierter Ansatz eine entscheidente Achillisverse: Die Qualität des Fuzzinghängt maßgebend vom Seed ab. Eine hoch-qualitatives Seed, welches auf die Protokoll-Syntax angepasst wurde, ist unerlässig für ein hoch-qualitatives Ergebnis. 
+
+\paragraph{Fuzzer in the Middle}
+
+Fuzzer in the Middle ist eine von dem Man in the Middle abgeleitete Strategie. Der Fuzzer steht hier zwischen Server und Client. Der Fuzzer fängt die Kommunikation ab und manipuliert diese beliebig. Dadurch kann der Fuzzer sowohl den Client, als auch den Server gleichzeitig fuzzen. Der Fuzzer muss hierbei nicht manipilieren. Vielmehr greift er gezielt den Zustand zwischen Client und Server an, für den Exploits gefunden werden sollen. 
+
+Fuzzer in the Middle wird beispielsweise durch ProxyFuzz \hyperref{https://src.fedoraproject.org/rpms/proxyfuzz}, AutoFuzz \cite{Gorbunov2010autofuzz}, SEC-Fuzz\cite{tsankov2012secfuzz}, oder FITM\cite{maier2022fitm} implementiert. 
+
+Nachteilig ist, dass diese Strategie die Komplexität der Implementierung und Ausführung des Fuzzings maßgeblich erhöht. Sofern die Kommunikation einem kryptographischem Verfahren zugrundeliegt, muss der Fuzzer über ein fundiertes Wissen über dieses verfügen.
 
 \subsubsection{Anforderungen an den Testfall}
 
 Die Erzeugung von Testfällen ist in Netzwerprotokollen vor zwei besonderen Herausforderungen gestellt: Zum einen muss ein Testfall der Protokollsyntax entsprechen. Zum anderen muss der generierte Testfall möglichst gut die komplexen Zustandsübergänge des Protokolls und seiner Implementierung abdecken. 
 
+\section{Testausführung und Monitor}
 
 

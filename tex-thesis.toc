@@ -1,0 +1,47 @@
+\babel@toc {nil}{}\relax 
+\contentsline {section}{Rechtliche Erklärung}{III}{chapter*.1}%
+\contentsline {section}{Vorwort}{V}{chapter*.4}%
+\contentsline {section}{Abbildungsverzeichnis}{IX}{chapter*.6}%
+\contentsline {section}{Tabellenverzeichnis}{XI}{chapter*.7}%
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Grundlagen des Fuzzings}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Blackbox, Whitebox und Greybox}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Klassifikation nach Eingabegenerierung}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mit und ohne Feedbackmechanismus}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Anatomie der ersten Fuzzing Systeme}{4}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Grundlage Netzwerke und Kryptographie}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}OSI Schichten-Modell}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Anwendungsschicht}{7}{subsection.3.1.1}%
+\contentsline {subsubsection}{HTTP und Webserver}{7}{section*.9}%
+\contentsline {subsubsection}{SSH}{7}{section*.10}%
+\contentsline {subsection}{\numberline {3.1.2}Transportschicht}{7}{subsection.3.1.2}%
+\contentsline {subsubsection}{TCP/UDP}{7}{section*.11}%
+\contentsline {subsubsection}{TLS}{7}{section*.12}%
+\contentsline {subsection}{\numberline {3.1.3}Netzwerkschicht}{7}{subsection.3.1.3}%
+\contentsline {subsubsection}{VPN}{7}{section*.13}%
+\contentsline {section}{\numberline {3.2}Kryptografische Grundlagen}{7}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Asymmetrische Verfahren (RSA und Diffie Hellmann)}{7}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Zertifikate}{7}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Netzworkfuzzing}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Herausforderungen und Besonderheiten}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Abhängigkeit von Netzwerk-Verbindungen}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Zustandsbehaftetheit}{10}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Hoch strukturierte Eingaben}{10}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Nicht-Uniformität}{10}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Allgemeines Vorgehensmodell}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Erste Stufe: Protokollsyntax-Erfassung}{11}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Zweite Stufe: Testfall-Erzeugung}{11}{subsection.4.2.2}%
+\contentsline {chapter}{\numberline {5}Beispiele aus der Praxis}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Spezielle Vorgehensmodelle}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Zweistufiger Fuzzingansatz von TLS-Attacker}{13}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}TLS-Fuzzer Libary}{13}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Implementierungen und Anwendung}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}SSH-Fuzzer}{13}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}TLS-Attacker}{13}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}TLS-Fuzzer}{13}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}AFLnet}{13}{subsection.5.2.4}%
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Bonusmaterial}{17}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Messdaten}{17}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Formalien}{17}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Häufige Fehler}{18}{section.A.3}%
