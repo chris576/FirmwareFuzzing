@@ -1,4 +1,4 @@
-\babel@toc {nil}{}\relax 
+\babel@toc {ngerman}{}\relax 
 \contentsline {section}{Rechtliche Erklärung}{III}{chapter*.1}%
 \contentsline {section}{Vorwort}{V}{chapter*.4}%
 \contentsline {section}{Abbildungsverzeichnis}{IX}{chapter*.6}%
@@ -8,40 +8,35 @@
 \contentsline {section}{\numberline {2.1}Blackbox, Whitebox und Greybox}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Klassifikation nach Eingabegenerierung}{4}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Mit und ohne Feedbackmechanismus}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Anatomie der ersten Fuzzing Systeme}{4}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Grundlage Netzwerke und Kryptographie}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}OSI Schichten-Modell}{7}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Anwendungsschicht}{7}{subsection.3.1.1}%
-\contentsline {subsubsection}{HTTP und Webserver}{7}{section*.9}%
-\contentsline {subsubsection}{SSH}{7}{section*.10}%
-\contentsline {subsection}{\numberline {3.1.2}Transportschicht}{7}{subsection.3.1.2}%
-\contentsline {subsubsection}{TCP/UDP}{7}{section*.11}%
-\contentsline {subsubsection}{TLS}{7}{section*.12}%
-\contentsline {subsection}{\numberline {3.1.3}Netzwerkschicht}{7}{subsection.3.1.3}%
-\contentsline {subsubsection}{VPN}{7}{section*.13}%
-\contentsline {section}{\numberline {3.2}Kryptografische Grundlagen}{7}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Asymmetrische Verfahren (RSA und Diffie Hellmann)}{7}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Zertifikate}{7}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Netzworkfuzzing}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Herausforderungen und Besonderheiten}{9}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Abhängigkeit von Netzwerk-Verbindungen}{9}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Zustandsbehaftetheit}{10}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Hoch strukturierte Eingaben}{10}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Nicht-Uniformität}{10}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Allgemeines Vorgehensmodell}{11}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Erste Stufe: Protokollsyntax-Erfassung}{11}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Zweite Stufe: Testfall-Erzeugung}{11}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Beispiele aus der Praxis}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Spezielle Vorgehensmodelle}{13}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Zweistufiger Fuzzingansatz von TLS-Attacker}{13}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}TLS-Fuzzer Libary}{13}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Implementierungen und Anwendung}{13}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}SSH-Fuzzer}{13}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}TLS-Attacker}{13}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}TLS-Fuzzer}{13}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}AFLnet}{13}{subsection.5.2.4}%
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{15}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Bonusmaterial}{17}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Messdaten}{17}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Formalien}{17}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Häufige Fehler}{18}{section.A.3}%
+\contentsline {section}{\numberline {2.4}Anatomie der ersten Fuzzing Systeme}{5}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Netzworkfuzzing}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Herausforderungen im Netzwerkprotokoll-Fuzzing}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Abhängigkeit von Netzwerk-Verbindungen}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Zustandsbehaftetheit}{8}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Hoch strukturierte Eingaben}{9}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Nicht-Uniformität}{9}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Allgemeines Vorgehensmodell}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Erste Stufe: Protokollsyntax-Erfassung}{10}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Zweite Stufe: Testfall-Erzeugung}{10}{subsection.3.2.2}%
+\contentsline {paragraph}{Generationbasierte Strategien}{10}{section*.10}%
+\contentsline {paragraph}{Mutation-Basierte Strategien}{11}{section*.11}%
+\contentsline {paragraph}{Fuzzer in the Middle}{11}{section*.12}%
+\contentsline {subsubsection}{Anforderungen an den Testfall}{12}{section*.13}%
+\contentsline {subsection}{\numberline {3.2.3}Dritte Stufe: Testausführung und Monitor}{12}{subsection.3.2.3}%
+\contentsline {subsubsection}{Snapshots für den Monitor}{12}{section*.14}%
+\contentsline {subsubsection}{Emulation von Netzwerken}{13}{section*.15}%
+\contentsline {subsubsection}{IO-Synchronisation}{13}{section*.16}%
+\contentsline {subsection}{\numberline {3.2.4}Stufie vier: Feedback Informationserfassung und Nutzung}{13}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Zwei-Stufenmodell von TLS-Attacker}{13}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Anwendungsbeispiele}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lokale SSH und TLS Server}{15}{section.4.1}%
+\contentsline {section}{\numberline {4.2}SSH-Fuzzer}{15}{section.4.2}%
+\contentsline {section}{\numberline {4.3}TLS-Attacker}{15}{section.4.3}%
+\contentsline {section}{\numberline {4.4}TLS-Fuzzer}{15}{section.4.4}%
+\contentsline {section}{\numberline {4.5}AFLnet}{15}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Zusammenfassung und Ausblick}{17}{chapter.5}%
+\contentsline {chapter}{Literatur}{19}{chapter*.17}%
+\contentsline {chapter}{\numberline {A}Bonusmaterial}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Messdaten}{21}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Formalien}{21}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Häufige Fehler}{22}{section.A.3}%

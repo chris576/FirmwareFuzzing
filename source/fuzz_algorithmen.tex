@@ -1,6 +1,12 @@
 \chapter{Netzworkfuzzing}
 
-\section{Herausforderungen und Besonderheiten}
+Netzwerkfuzzing ist eine spezialisierte Form des Fuzzings, die sich auf die Anslyse und das Testen von Netzwerkprotokollen und -diensten konzentriert. Das Fuzzing kann ab Schicht 2 auf allen Schichten des OSI-Modells angewendet werden. 
+
+Das \textbf{OSI-Modell} (Open Systems Interconnection Model) ist ein Referenzmodell, das die Kommunikation zwischen Computersystemen in sieben hierarchische Schichten unterteilt\footnote{Siehe \url{https://de.wikipedia.org/wiki/OSI-Modell}}. Diese Schichten reichen von der physischen Übertragung (Schicht 1) bis zur Anwendungsschicht (Schicht 7), die direkt mit Softwareanwendungen interagiert. Jede Schicht erfüllt spezifische Aufgaben und kommuniziert nur mit den direkt angrenzenden Schichten, wodurch eine modulare und standardisierte Netzwerkkommunikation ermöglicht wird.
+
+Im folgenden betrachten wir die Grundkonzepte und Herausforderungen, ohne auf die spezifischen Herausforderungen einzelner Protokolle oder Schichten einzugehen.
+
+\section{Herausforderungen im Netzwerkprotokoll-Fuzzing}
 
 Die Autoren des Papers \cite{Jiang2024SurveyNetworkProtocolFuzzing}\textbf{Systematic Fuzzing and Testing of TLS Libraries
 } identifizieren vier zentrale Charakteristika von Netzwerkprotokollen, die Fuzzing vor besondere Hürden stellen: 
@@ -74,8 +80,6 @@ Diese Stufe fokussiert sich auf die Erzeugung von Testfällen. Basierend auf dem
 
 Die zu unterscheidenden Strategien wurden bereits in der Section \ref{sec:Grundlagen} eingeleitet.
 
-\subsubsection{Anforderungen an die Input-Generation-Strategie}
-
 \paragraph{Generationbasierte Strategien} definieren im Fall des Protokoll-Fuzzings zwei Arten von Modellen: Zustandsübergänge und Protokoll-Syntax. Frühere Fuzzer, sowie Spike \cite{Jiang2024SurveyNetworkProtocolFuzzing} stellten ein Interface in Form einer Konfigurationsdatei zur Verfügung, um diese Modelle zu spezifizieren. Diese Dateien enthalten eine Art Datenstruktur der Protokoll-Syntax und der Übergänge und bilden damit die erste Epoche der hier vorgestellten Strategie.
 
 Dies setzt natürlich ein umfangreiches Wissen über das zu testende Protokoll voraus. Kleine Fehler des Modells führen zu einer gravierend kleineren Qualität des Testprozesses. Darüber hinaus fehlt diesen Modellen die Fähigkeit den Zustandsraum autonom, oder heuristisch zu erforschen, um eine optimale Testabdeckung zu erzielen. Stattdessen führen sie einen festen Zustandsautomaten aus, der auf kleine Veränderungen der Implementierung des Protokolls schlecht reagiert.\cite{Jiang2024SurveyNetworkProtocolFuzzing}
@@ -104,6 +108,38 @@ Nachteilig ist, dass diese Strategie die Komplexität der Implementierung und Au
 
 Die Erzeugung von Testfällen ist in Netzwerprotokollen vor zwei besonderen Herausforderungen gestellt: Zum einen muss ein Testfall der Protokollsyntax entsprechen. Zum anderen muss der generierte Testfall möglichst gut die komplexen Zustandsübergänge des Protokolls und seiner Implementierung abdecken. 
 
-\section{Testausführung und Monitor}
+\subsection{Dritte Stufe: Testausführung und Monitor}
+
+Die Testausführung bezeichnet den Prozess, bei dem das zu testende Programm (Program Under Test, PUT) die generierten Testfälle empfängt und verarbeitet. Der Monitor überwacht kontinuierlich das Verhalten des PUT während der Testausführung, um Anomalien, Abstürze oder andere unerwartete Verhaltensweisen zu identifizieren. Die meisten Protokoll-Fuzzer implementieren hierfür Mechanismen zur Detektion von Programmabstürzen in Kombination mit speicherbasierten Fehlererkennungsverfahren (z.\,B. AddressSanitizer, Valgrind).
+
+Im Unterschied zu klassischen Fuzzern, nimmt die Testausführung eine große Rolle bei den Systemressourcen ein. Netzwerkprotokolle sind häufig zeitkritisch und erfordern eine präzise Steuerung der Netzwerkkommunikation. Daher muss die Testausführung effizient gestaltet sein, um eine hohe Testfall-Durchsatzrate zu gewährleisten.
+
+Netzwerkprotkolle haben ebenso im Vergleich zum Lesen eines Files, oder der CLI, einen zeitlichen Overhead. Dieser ist darauf zurückzuführen, dass die Protokollsoftware zunächst Daten über das Netzwerkinterface senden und empfangen muss. Dies kann zu Latenzen führen, die den Fuzzing-Prozess verlangsamen. Im idealfall sind Fuzzer und PUT auf demselben System implementiert, um Netzwerk-Latenzen zu minimieren. Aber selbst dann muss der Fuzzer über die Loopback-Schnittstelle kommunizieren, was immer noch langsamer ist als der direkte Dateizugriff.
+
+Darüber hinaus sind Multi-Threaded Server prinzipiell mit höheren Kosten, in Bezug auf Laufzeit, Speicher und Stromkosten, verbunden. 
+
+In den folgenden Subsektionen werden Techniken vorgestellt, um die Effizienz der Testausführung und des Monitors erheblich zu verbessern.
+
+\subsubsection{Snapshots für den Monitor}
+
+Snapshots sind statische Kopien des internen Zustandes eines Betriebssystems, oder Prozesses im physischem Speicher und verschiedener Devices zu einem bestimmten Zeitpunkt.\cite{Jiang2024SurveyNetworkProtocolFuzzing}
+
+Im Kontext des Netzwerkprotokoll-Fuzzings können Snapshots verwendet werden, um den Zustand des PUT zu einem bestimmten Zeitpunkt während der Testausführung zu erfassen. Dies ermöglicht es dem Monitor, den Zustand des PUT zu analysieren und potenzielle Fehlerquellen zu identifizieren und ggf. den Zustand wiederherzustellen, um den Fuzzing-Prozess fortzusetzen.
+
+Diese Sektion könnte deutlich mehr Aufmerksamkeit erhalten. Um aber den Fokus nicht zu verlieren, wird gern auf die Originalquelle verwiesen. In dieser werden diverse weitere Quellen genannt, die einen tieferen Einblick in die Materie ermöglicht.
+
+\subsubsection{Emulation von Netzwerken}
+
+Einige Forschungen und Tools haben sich darauf konzentriert, kostenintensive Netzwerkinterfaces durch simulierte Netzwerke zu ersetzen. Die Forscher des Artikels \cite{Jiang2024SurveyNetworkProtocolFuzzing}[A Survey of Network Protocol Fuzzing: Model, Techniques and Directions] nennen hier beispielsweise \textbf{Nyx-net}, welches ein emuliertes Netzwerkinterface bereitstellt, das den Netzwerkverkehr zwischen dem Fuzzer und dem PUT simuliert. Dadurch können Netzwerkprotokolle getestet werden, ohne dass physische Netzwerkhardware erforderlich ist.
+
+Dieses Thema ist allgemein sehr umfangreich und geht weit über den Rahmen in dieser Arbeit hinaus. Dennoch ist es wichtig zu wissen, dass es solche Ansätze gibt, um die Kosten und Komplexität des Netzwerkprotokoll-Fuzzings zu reduzieren.
+
+\subsubsection{IO-Synchronisation}
+
+\textbf{SFuzz} implementiert Synchronisationspunkte zur deterministischen Steuerung der Nachrichtenübertragung. Netzwerkprotokollsoftware operiert nach der Initialisierungsphase typischerweise in einer iterativen Event-Loop-Struktur. Jede Client-Eingabe induziert einen Verarbeitungszyklus bestehend aus: Nachrichtenempfang → Verarbeitung → Rücksprung in die Event-Loop. \textbf{SFuzz} platziert einen Synchronisationspunkt am Einstiegspunkt der Event-Loop, welcher deterministisch signalisiert, dass das PUT (Program Under Test) bereit zur Entgegennahme einer neuen Nachricht ist. Dadurch entfällt die Notwendigkeit heuristischer Verfahren (wie Timeout-basierte Mechanismen) zur Bestimmung des optimalen Sendezeitpunkts. Dies resultiert in einer signifikanten Steigerung der Fuzzing-Effizienz.
+
+\subsection{Stufie vier: Feedback Informationserfassung und Nutzung}
 
 
+
+\section{Zwei-Stufenmodell von TLS-Attacker}

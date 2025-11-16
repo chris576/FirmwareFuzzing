@@ -1,0 +1,641 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{chen2018systematic}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=da31f56113cb61a1fef7cf7543eefff8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e5146304c803b5adde4dc0d8580145b}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Baojiang},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2d01f8d5407310ca09c76cb9d4592f3}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Jinxin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c912cfb165dd65e383dfab8ebc629314}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Runpu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c13bc1f92d2c0e9f00a4a6fad5952dad}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jianchao},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5faab3499ba8ba05d21452bc2913da3d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wenqian},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1ccea5f857df28e6e13a0cd4be28bb7d}
+      \strng{fullhash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{bibnamehash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{authorbibnamehash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{authornamehash}{1ccea5f857df28e6e13a0cd4be28bb7d}
+      \strng{authorfullhash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Security}
+      \field{title}{A Systematic Review of Fuzzing Techniques}
+      \field{volume}{75}
+      \field{year}{2018}
+      \field{pages}{118\bibrangedash 137}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/j.cose.2018.02.002
+      \endverb
+      \verb{urlraw}
+      \verb https://gosec.sjtu.edu.cn/wp-content/uploads/2021/05/Fuzzing2018Chen.pdf
+      \endverb
+      \verb{url}
+      \verb https://gosec.sjtu.edu.cn/wp-content/uploads/2021/05/Fuzzing2018Chen.pdf
+      \endverb
+    \endentry
+    \entry{Gorbunov2010autofuzz}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4777613a5c2fc8da29857f657c607fa9}{%
+           family={Gorbunov},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{fullhash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{bibnamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authorbibnamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authornamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authorfullhash}{4777613a5c2fc8da29857f657c607fa9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Science and Network Security (IJCSNS)}
+      \field{title}{Autofuzz: Automated network protocol fuzzing framework}
+      \field{volume}{10}
+      \field{year}{2010}
+      \field{pages}{239}
+      \range{pages}{1}
+    \endentry
+    \entry{Jiang2024SurveyNetworkProtocolFuzzing}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=3e614c9f8a958731bf6cdc955eeea3ab}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Shihao},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=577b9dcc1dcce285e04c033daa99e0aa}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Junqiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2512cd751007ec14f799da2644aa0f2}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Hongfang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bf696cea6ee841946e7d0f3851335de}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c01a1c103bd601c5a256e9f1425f9d8}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd48f2a52945daaa5417830554918405}
+      \strng{fullhash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{bibnamehash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{authorbibnamehash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{authornamehash}{fd48f2a52945daaa5417830554918405}
+      \strng{authorfullhash}{2fc2c336fcd277299b116bbc1666feda}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2402.17394}
+      \field{title}{A Survey of Network Protocol Fuzzing: Model, Techniques and Directions}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2402.17394
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2402.17394
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2402.17394
+      \endverb
+    \endentry
+    \entry{li2021protocol-fuzzing}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=0ee6724aae227dcac2949962d898b300}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d93961f7243e8dff5e3d5cbc19c1a2d}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28d34165744163123ef68be344926917}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f46cff6a47143fdbd36ae8842919e073}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c17377c2ffa1676c810d97c02f8c306}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b1252b62d1fd362072e024e57d8a92a7}
+      \strng{fullhash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{bibnamehash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{authorbibnamehash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{authornamehash}{b1252b62d1fd362072e024e57d8a92a7}
+      \strng{authorfullhash}{a5e91cadeb752b57bb8128e096c41a29}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2021 International Conference}
+      \field{title}{Protocol fuzzing with specification guided message generation}
+      \field{year}{2021}
+    \endentry
+    \entry{maier2022fitm}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3650e6e0e75a644695ca78ac12d894ae}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f27c4f3e30eee7878217d88c8a81a156}{%
+           family={Bittner},
+           familyi={B\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8a77f263af4b563f393ca7ddb187810}{%
+           family={Munier},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1fad3ce7eaa9ea9982ef899b9e5251c}{%
+           family={Beier},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{87715e3bb0fafe52646980091f9314e6}
+      \strng{fullhash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{bibnamehash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{authorbibnamehash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{authornamehash}{87715e3bb0fafe52646980091f9314e6}
+      \strng{authorfullhash}{d3263b548f7c7635e953b48c4ad460db}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Workshop on Binary Analysis Research (BAR)}
+      \field{note}{Part of the Network and Distributed System Security Symposium (NDSS) Workshops}
+      \field{title}{FITM: Binary-only coverage-guided fuzzing for stateful network protocols}
+      \field{year}{2022}
+    \endentry
+    \entry{tsankov2012secfuzz}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=474c63b054a26dd84028be987d001084}{%
+           family={Tsankov},
+           familyi={T\bibinitperiod},
+           given={Petar},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5ebe2c5672cd3d672d49f732afa0054}{%
+           family={Dashti},
+           familyi={D\bibinitperiod},
+           given={Mohammad\bibnamedelima Torabi},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96dd2002d303d0089f664a145acfbf90}{%
+           family={Basin},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{45477e6a0c2b9e282759a1102696e37b}
+      \strng{fullhash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{bibnamehash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{authorbibnamehash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{authornamehash}{45477e6a0c2b9e282759a1102696e37b}
+      \strng{authorfullhash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2012 7th International Workshop on Automation of Software Test (AST)}
+      \field{title}{Secfuzz: Fuzz-testing security protocols}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{chen2018systematic}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=da31f56113cb61a1fef7cf7543eefff8}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Chen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e5146304c803b5adde4dc0d8580145b}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Baojiang},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2d01f8d5407310ca09c76cb9d4592f3}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Jinxin},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c912cfb165dd65e383dfab8ebc629314}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Runpu},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c13bc1f92d2c0e9f00a4a6fad5952dad}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jianchao},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5faab3499ba8ba05d21452bc2913da3d}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wenqian},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1ccea5f857df28e6e13a0cd4be28bb7d}
+      \strng{fullhash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{bibnamehash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{authorbibnamehash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \strng{authornamehash}{1ccea5f857df28e6e13a0cd4be28bb7d}
+      \strng{authorfullhash}{f0a3be4e1986d69f34572ecfaeaa3c86}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Security}
+      \field{title}{A Systematic Review of Fuzzing Techniques}
+      \field{volume}{75}
+      \field{year}{2018}
+      \field{pages}{118\bibrangedash 137}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/j.cose.2018.02.002
+      \endverb
+      \verb{urlraw}
+      \verb https://gosec.sjtu.edu.cn/wp-content/uploads/2021/05/Fuzzing2018Chen.pdf
+      \endverb
+      \verb{url}
+      \verb https://gosec.sjtu.edu.cn/wp-content/uploads/2021/05/Fuzzing2018Chen.pdf
+      \endverb
+    \endentry
+    \entry{Gorbunov2010autofuzz}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4777613a5c2fc8da29857f657c607fa9}{%
+           family={Gorbunov},
+           familyi={G\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{fullhash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{bibnamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authorbibnamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authornamehash}{4777613a5c2fc8da29857f657c607fa9}
+      \strng{authorfullhash}{4777613a5c2fc8da29857f657c607fa9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Science and Network Security (IJCSNS)}
+      \field{title}{Autofuzz: Automated network protocol fuzzing framework}
+      \field{volume}{10}
+      \field{year}{2010}
+      \field{pages}{239}
+      \range{pages}{1}
+    \endentry
+    \entry{Jiang2024SurveyNetworkProtocolFuzzing}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=3e614c9f8a958731bf6cdc955eeea3ab}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Shihao},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4f4a1ff661cd600eb26523a5ba8bb4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=577b9dcc1dcce285e04c033daa99e0aa}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Junqiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2512cd751007ec14f799da2644aa0f2}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Hongfang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bf696cea6ee841946e7d0f3851335de}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Long},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c01a1c103bd601c5a256e9f1425f9d8}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fd48f2a52945daaa5417830554918405}
+      \strng{fullhash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{bibnamehash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{authorbibnamehash}{2fc2c336fcd277299b116bbc1666feda}
+      \strng{authornamehash}{fd48f2a52945daaa5417830554918405}
+      \strng{authorfullhash}{2fc2c336fcd277299b116bbc1666feda}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2402.17394}
+      \field{title}{A Survey of Network Protocol Fuzzing: Model, Techniques and Directions}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2402.17394
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2402.17394
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2402.17394
+      \endverb
+    \endentry
+    \entry{li2021protocol-fuzzing}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=0ee6724aae227dcac2949962d898b300}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef065b28c31984323fd6d3483d29aafd}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d93961f7243e8dff5e3d5cbc19c1a2d}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28d34165744163123ef68be344926917}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f46cff6a47143fdbd36ae8842919e073}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c17377c2ffa1676c810d97c02f8c306}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b1252b62d1fd362072e024e57d8a92a7}
+      \strng{fullhash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{bibnamehash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{authorbibnamehash}{a5e91cadeb752b57bb8128e096c41a29}
+      \strng{authornamehash}{b1252b62d1fd362072e024e57d8a92a7}
+      \strng{authorfullhash}{a5e91cadeb752b57bb8128e096c41a29}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2021 International Conference}
+      \field{title}{Protocol fuzzing with specification guided message generation}
+      \field{year}{2021}
+    \endentry
+    \entry{maier2022fitm}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3650e6e0e75a644695ca78ac12d894ae}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f27c4f3e30eee7878217d88c8a81a156}{%
+           family={Bittner},
+           familyi={B\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8a77f263af4b563f393ca7ddb187810}{%
+           family={Munier},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1fad3ce7eaa9ea9982ef899b9e5251c}{%
+           family={Beier},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{87715e3bb0fafe52646980091f9314e6}
+      \strng{fullhash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{bibnamehash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{authorbibnamehash}{d3263b548f7c7635e953b48c4ad460db}
+      \strng{authornamehash}{87715e3bb0fafe52646980091f9314e6}
+      \strng{authorfullhash}{d3263b548f7c7635e953b48c4ad460db}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Workshop on Binary Analysis Research (BAR)}
+      \field{note}{Part of the Network and Distributed System Security Symposium (NDSS) Workshops}
+      \field{title}{FITM: Binary-only coverage-guided fuzzing for stateful network protocols}
+      \field{year}{2022}
+    \endentry
+    \entry{tsankov2012secfuzz}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=474c63b054a26dd84028be987d001084}{%
+           family={Tsankov},
+           familyi={T\bibinitperiod},
+           given={Petar},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5ebe2c5672cd3d672d49f732afa0054}{%
+           family={Dashti},
+           familyi={D\bibinitperiod},
+           given={Mohammad\bibnamedelima Torabi},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96dd2002d303d0089f664a145acfbf90}{%
+           family={Basin},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{45477e6a0c2b9e282759a1102696e37b}
+      \strng{fullhash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{bibnamehash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{authorbibnamehash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \strng{authornamehash}{45477e6a0c2b9e282759a1102696e37b}
+      \strng{authorfullhash}{520ccc0e0e238e1a4e158a324bd5d81b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2012 7th International Workshop on Automation of Software Test (AST)}
+      \field{title}{Secfuzz: Fuzz-testing security protocols}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+    \endentry
+  \enddatalist
+  \missing{balcik2010}
+  \missing{teschl2013}
+\endrefsection
+\endinput
+

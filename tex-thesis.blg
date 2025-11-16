@@ -1,0 +1,22 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'tex-thesis.blg'
+[46] biber:340> INFO - === Sun Nov 16, 2025, 13:59:50
+[57] Biber.pm:419> INFO - Reading 'tex-thesis.bcf'
+[94] Biber.pm:979> INFO - Found 8 citekeys in bib section 0
+[102] Biber.pm:4419> INFO - Processing section 0
+[108] Biber.pm:4610> INFO - Looking for bibtex file 'myliterature.bib' for section 0
+[109] bibtex.pm:1713> INFO - LaTeX decoding ...
+[114] bibtex.pm:1519> INFO - Found BibTeX data source 'myliterature.bib'
+[162] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[162] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[162] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[162] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[172] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[173] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[173] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[173] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[179] bbl.pm:660> INFO - Writing 'tex-thesis.bbl' with encoding 'UTF-8'
+[184] bbl.pm:763> INFO - Output to tex-thesis.bbl
+[184] Biber.pm:131> WARN - I didn't find a database entry for 'balcik2010' (section 0)
+[184] Biber.pm:131> WARN - I didn't find a database entry for 'teschl2013' (section 0)
+[184] Biber.pm:133> INFO - WARNINGS: 2
